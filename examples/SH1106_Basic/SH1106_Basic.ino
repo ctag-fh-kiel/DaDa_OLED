@@ -13,7 +13,7 @@
 #define OLED_RST 16
 
 SoftwareSPI softSPI(OLED_SCLK, OLED_DC, OLED_MOSI);
-DaDa_SH1106 display(128, 64, softSPI, OLED_DC, OLED_RST, OLED_CS);
+DaDa_SH1106 display(128, 64, &softSPI, OLED_DC, OLED_RST, OLED_CS);
 
 void setup() {
   display.begin();
