@@ -87,7 +87,7 @@ bool DaDa_SH1106::begin(uint8_t addr, bool reset) {
 
   Adafruit_GrayOLED::_init(addr, reset);
 
-  _page_start_offset = 0; // shift left if needed
+  _page_start_offset = 2; // shift left if needed
 
   // Init sequence, make sure its under 32 bytes, or split into multiples!
   static const uint8_t init[] = {
