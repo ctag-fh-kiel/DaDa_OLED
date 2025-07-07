@@ -9,7 +9,7 @@ DaDa_OLED is an Arduino library for controlling OLED displays based on the SSD13
 - SSD1309 is 2.4" 128x64 pixels (UI board), SH1106 is 1.3" 128x64 pixels display (stand alone board)
 
 ## Examples
-See the `examples` folder for usage examples.
+See the `examples` folder for usage examples. They are made for the rp2350 with PIOSPI.
 
 ## Dependencies
 - [Adafruit_GrayOLED](https://github.com/adafruit/Adafruit-GFX-Library) (required)
