@@ -19,9 +19,14 @@ jobs:
       - name: Set up zip
         run: sudo apt-get update && sudo apt-get install -y zip
 
+      - name: Prepare library folder
+        run: |
+          mkdir DaDa_OLED
+          mv DaDa_SH1106.cpp DaDa_SH1106.h DaDa_SSD1309.cpp DaDa_SSD1309.h library.properties LICENSE.txt README.md examples DaDa_OLED/
+
       - name: Package source files
         run: |
-          zip -r DaDa_OLED.zip *
+          zip -r DaDa_OLED.zip DaDa_OLED
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
