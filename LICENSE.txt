@@ -1,4 +1,4 @@
-// dada-ssd1309-mcl is adapted from the Adafruit SSD1306 library
+// DaDa_OLED is adapted from the Adafruit SSD1306 library
 
 /*
 *Software License Agreement (BSD License)
