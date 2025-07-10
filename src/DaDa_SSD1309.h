@@ -36,6 +36,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define SSD1309_WHITE 1   ///< Draw 'on' pixels
 #define SSD1309_INVERSE 2 ///< Invert pixels
 
+#define SSD1309_DISPLAYOFF 0xAE
+#define SSD1309_DISPLAYON 0xA4
+
 class DaDa_SSD1309 : public Adafruit_GrayOLED{
 public:
     DaDa_SSD1309(uint16_t w, uint16_t h, SPIClass *spi, int16_t dc_pin,
@@ -45,7 +48,8 @@ public:
 
     void display(void);
     bool begin(uint8_t i2caddr = 0x3C, bool reset = true);
-
+    void sleep();
+    void wake();
 protected:
     /*! some displays are 'inset' in memory, so we have to skip some memory to
      * display */
