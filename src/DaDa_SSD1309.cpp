@@ -139,3 +139,6 @@ bool DaDa_SSD1309::begin(uint8_t addr, bool reset) {
 
   return true; // Success
 }
+
+void DaDa_SSD1309::sleep(void) { oled_command(SSD1309_DISPLAYOFF); }
+void DaDa_SSD1309::wake(void) { oled_command(SSD1309_DISPLAYON); }
